@@ -8,9 +8,9 @@ public class TarjetaDeCredito {
 	private double acumuladoActual;
 
 	public TarjetaDeCredito(String newNumero, String newTitular, double newLimiteDeCompra) {
-		this.numero = newNumero;
-		this.titular = newTitular;
-		this.limiteDeCompra = newLimiteDeCompra;
+		setNumero(newNumero);
+		setTitular(newTitular);
+		setLimiteDeCompra(newLimiteDeCompra);
 		acumuladoActual = 0;
 	}
 
