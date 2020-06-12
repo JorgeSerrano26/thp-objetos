@@ -11,10 +11,19 @@ public class Test {
 		
 		
 		testearCafetera(cafetera1);
+		testearCafetera(cafetera2);
+		testearCafetera(cafetera3);
 	
 		
 		
 	}
 
+	public static void testearCafetera(Cafetera cafetera) {
+
+		cafetera.agregarCafe(50);
+		System.out.println(cafetera.toString());
+		cafetera.servirTaza(50);
+		System.out.println(cafetera.toString());
+	}
 
 }

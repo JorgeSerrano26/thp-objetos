@@ -22,7 +22,7 @@ public class Cafetera {
 		}
 	}
 
-	private void setCapacidadMaxima(int newCapacidadMaxima) {
+	public void setCapacidadMaxima(int newCapacidadMaxima) {
 		if (newCapacidadMaxima < 250) {
 			this.capacidadMaxima = 250;
 		} else {
@@ -50,11 +50,11 @@ public class Cafetera {
 		return cantidadActual;
 	}
 
-	private void llenar() {
+	public void llenar() {
 		cantidadActual = capacidadMaxima;
 	}
 
-	private int servirTaza(int newCantidadTaza) {
+	public int servirTaza(int newCantidadTaza) {
 		int sirvioTaza = 0;
 
 		if (newCantidadTaza > cantidadActual) {
@@ -68,11 +68,11 @@ public class Cafetera {
 		return sirvioTaza;
 	}
 
-	private void vaciar() {
+	public void vaciar() {
 		cantidadActual = 0;
 	}
 
-	private int agregarCafe(int cantidadAgregar) {
+	public int agregarCafe(int cantidadAgregar) {
 		int cantidadSobrante = 0;
 		if (cantidadAgregar <= (capacidadMaxima - cantidadActual)) {
 			System.out.println("Se agrego correctamente y no sobro nada");
@@ -86,9 +86,10 @@ public class Cafetera {
 		return cantidadSobrante;
 	}
 
-	public static Cafetera testearCafetera(Cafetera cafetera) {
-
-		return 
+	
+	@Override
+	public String toString() {
+		return "CapacidadMaxima y CantidadActual [CapacidadMaxima=" + capacidadMaxima + "CantidadActual="+  cantidadActual +"]";	
 	}
 
 }
